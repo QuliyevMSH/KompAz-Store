@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --input-border-color: #ccc;
+    --input-focus-border-color: #4CAF50;
+    --button-bg-color: #4CAF50;
+    --button-text-color: white;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-title h3 {
+    font-size: 2em;
+    color: #52b9f0;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.map {
+    flex: 1;
+}
+
+.form-container {
+    flex: 1;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.input-field p.label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: black;
+}
+
+.input-field input,
+.input-field input {
+    color: black;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-color: var(--input-focus-border-color);
+}
+
+.input-field .icon {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    color: var(--input-border-color);
+}
+
+.textarea-input-field {
+    height: 120px;
+    resize: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 13px;
+    border: 1px solid #2997d2;
+    border-radius: 5px;
+    color: #52b9f0;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.5s ease;
+}
+
+.submit-button:hover {
+    background-color: #A0DEFF;
+    color: #726608;
+    transition: 0.5s ease;
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}

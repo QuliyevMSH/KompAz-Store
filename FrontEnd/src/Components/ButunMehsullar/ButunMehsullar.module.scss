@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+IT+Moderna:wght@319&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+
+        h1 {
+            font-family: "Playwrite DE Grund", cursive;
+            font-size: 18px;
+            line-height: 27px;
+            font-weight: 500;
+        }
+
+        .products {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .productBox {
+                width: 23%;
+                min-height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #52b9f0;
+                border-radius: 10px;
+                position: relative;
+                transition: 0.5s ease;
+                &:hover{
+                    border-radius: 10px 40px 10px 10px;
+                    transition: 0.5s ease;
+                    .favBtn{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                .containerBox {
+                    width: 90%;
+                    min-height: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .image {
+                        width: 100%;
+                        height: 200px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .content {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        h1 {
+                            font-family: "Playwrite DE Grund", cursive;
+                            font-size: 15px;
+                            line-height: 20px;
+                            font-weight: 500;
+                        }
+
+                        p {
+                            font-family: "Playwrite DE Grund", cursive;
+                            font-size: 13px;
+                            white-space: 3;
+                        }
+
+                        span {
+                            font-size: 17px;
+                            color: #18709f;
+                        }
+
+                        .btns {
+                            width: 100%;
+
+                            button {
+                                width: 100%;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 3px;
+                                font-size: 13px;
+                                border: 1px solid #2997d2;
+                                border-radius: 5px;
+                                color: #52b9f0;
+                                cursor: pointer;
+                                background-color: transparent;
+                                transition: 0.5s ease;
+
+
+                                &:hover {
+                                    background-color: #A0DEFF;
+                                    color: #726608;
+                                    transition: 0.5s ease;
+                                    border-color: transparent;
+                                }
+
+                            }
+                        }
+                       
+                    }
+                }
+                .favBtn{
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    background-color: rgb(226, 45, 45);
+                    border-color: transparent;
+                    border-radius: 50px 100px;
+                    top: 0;
+                    right: 0;
+                    font-size: 26px;
+                    color: white;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, 0.5s ease;
+                    &:hover{
+                        background-color: transparent;
+                        border: 2px solid rgb(226, 45, 45);
+                        color: red;
+                        transition: 0.5s ease;
+                    }
+
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 1160px) {
+    .main{
+        .container{
+            .products{
+                .productBox{
+                    width: 31%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 850px) {
+    .main{
+        .container{
+            .products{
+                .productBox{
+                    width: 47%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 620px) {
+    .main{
+        .container{
+            .products{
+                justify-content: center;
+                .productBox{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
